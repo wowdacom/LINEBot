@@ -21,12 +21,15 @@ bot.on('message', function (event) {
     replyMsg = '我是女生'
   }
   if (event.message.text.includes('笑話') === true) {
-  
     replyMsg = '你 40 公斤，我 60 公斤，棉花 60 公斤，鐵 60 公斤，哪一個重? '
   }
 
   if (event.message.text.includes('答案') === true || event.message.text.includes('不知道') === true) {
     replyMsg = "哈哈 答案是我最重，因為我心中多了一個你"
+  }
+
+  if (event.message.text.includes('不知道') === true) {
+    replyMsg = '你 40 公斤，我 60 公斤，棉花 60 公斤，鐵 60 公斤，哪一個重? '
   }
   event.reply(replyMsg).then(function (data) {
     // 當訊息成功回傳後的處理
